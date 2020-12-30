@@ -1,8 +1,16 @@
-#An Analysis of Kickstarter Campaigns
-This project analyzes the history of various Kickstarter campaigns and provides insight to why some were successful and some failed.
-Some filters used to analyze and compare the data include dates and lengths of the campaigns, campaign goals, amount pledged, and average donation.
-The findings provide evidence that campaigns launched in the spring and summer months are the most successful. Furthermore, the data suggests that campaigns with smaller goals tend to be more successful than other campaigns that have larger goals.
-In order to have a successful campaign, I would suggest a launch date in or around the month of May, and a fundin goal of approximately $5,000.
+# Kickstarter Analysis
+## Overview of Project
+### The purpose of this analysis was to compare data from various theater Kickstarter campaigns, finding success rates based on campaign launch dates and campaign goals. Through this analysis we are able to make conclusions about the optimal funding goal and launch dates for Louise's theater Kickstarter campaign.
 ---
-![Date_Created_Outcomes](path/to/Date_created_Outcomes.PNG)
-![Standard_Deviation](path/to/Standard_Deviation.PNG)
+## Analysis and Challenges
+### The "Theater Outcomes by Launch Date" portion of the analysis was created by first forming a pivot table containing the parent category (theater) and years (all) as the filters, and then having the months in the rows, and the outcomes as the values. This shows us how successful the various theater campaigns were based on the month they were launched in. Then, a line chart was created to show these outcomes with the months on the x-axis and the count of successful, failed, and canceled campaigns on the y-axis.
+![Theater_Outcomes_vs_Launch](path/to/Theater_Outcomes_vs_Launch.PNG)
+### The "Outcomes Based on Goals" portion of the analysis analyzed the number of successful, failed, and canceled campaigns in various funding goal ranges to show the optimal goal for ones campaign to be successful. A table was created with the rows presenting 12 different ranges of funding goals from 0 all the way to 50,000+. In the successful, failed, and canceled columns, "COUNTIFS" functions were executed and filtered by funding goal, outcome of the campaign, and the subcategory which was "plays". A total count column was also created so that the percentages could be calculated in the following columns. Then, another line chart was created to present the percentage of successful, failed, and canceled "plays" campaigns based on the value of the funding goal.
+![Outcomes_vs_Goals](path/to/Outcomes_vs_Goals.PNG)
+### No challenges were encountered while analyzing this data, but incorrect COUNTIFS formulas could lead to incorrect data analysis. It is important to check that the formulas are referencing the proper ranges on the main Kickstarter sheet.
+---
+## Results
+### Based on the analysis of Theater Outcomes by Launch Date, we can conclude that the month with the most successful campaign launch dates is May, so this may be the optimal time to launch Louise's campaign. However, it is worth noting that May is also the launch date month with the most failures, but this could likely be attributed to the fact that the most total campigns are launched in May.
+### Based on the analysis of Outcomes Based on Goals, it is easy to conclude that the higher the funding goal, the less successful the campaign is. Campaigns that had funding goals of less than 5,000 had success rates greater than 70%, so Louise should keep her goal within this range. 
+### Although this dataset produced some efficient conclusions and realizations, some limitations still exist. For example, we can see which launch dates are most successful, but that analysis does not show us how long those successful campaigns ran for. Furthermore, it would be useful to see the number of backers or the average donation for the successful campaigns and the failed campaigns within the various goal ranges.
+### A chart and graph showing the outcomes of campaigns based on the total number of backers and average donation would help to draw more conclusions on the Kickstarter campaigns. Additionally, outcomes based on campaign length would also be very useful.
